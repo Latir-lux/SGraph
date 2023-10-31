@@ -1,0 +1,1599 @@
+get degree: 2144101 / 2144101
+t1 = 0.016949 t2 = 0.049255
+load edges: 2144101 / 2144101
+t1 = 0.014462 t2 = 0.190551
+build_index
+t = 0.114583
+t = 0.011989
+t = 0.009594
+t = 0.018772
+t = 0.009784
+t = 0.013802
+t = 0.012235
+t = 0.016154
+t = 0.008075
+t = 0.025056
+t = 0.007508
+t = 0.015123
+t = 0.008191
+t = 0.019628
+t = 0.078283
+t = 0.071569
+t = 0.082123
+t = 0.078927
+t = 0.066688
+t = 0.082522
+t = 0.011979
+t = 0.023646
+t = 0.007409
+t = 0.019924
+t = 0.009093
+t = 0.040094
+t = 0.062579
+t = 0.085029
+t = 0.064058
+t = 0.065206
+t = 0.060258
+t = 0.082439
+build time = 1.575866
+source = 273528 sink = 128394 res = 1000000000.000000
+active num = 765637 iteration num = 55
+compute time = 0.053679
+source = 254943 sink = 259937 res = 0.000000
+active num = 29537 iteration num = 32
+compute time = 0.021659
+source = 296793 sink = 64314 res = 1000000000.000000
+active num = 29828 iteration num = 18
+compute time = 0.009550
+source = 109134 sink = 250102 res = 0.000000
+active num = 13890 iteration num = 23
+compute time = 0.015538
+source = 90431 sink = 180348 res = 1000000000.000000
+active num = 386982 iteration num = 44
+compute time = 0.034331
+source = 155419 sink = 204733 res = 1000000000.000000
+active num = 649988 iteration num = 42
+compute time = 0.034448
+source = 118758 sink = 167141 res = 1000000000.000000
+active num = 621167 iteration num = 47
+compute time = 0.044966
+source = 310005 sink = 298273 res = 1000000000.000000
+active num = 746938 iteration num = 42
+compute time = 0.033250
+source = 206960 sink = 233521 res = 1000000000.000000
+active num = 641022 iteration num = 46
+compute time = 0.043031
+source = 46099 sink = 197602 res = 1000000000.000000
+active num = 702028 iteration num = 54
+compute time = 0.038034
+source = 5306 sink = 79073 res = 1000000000.000000
+active num = 11479 iteration num = 15
+compute time = 0.008869
+source = 44676 sink = 261805 res = 1000000000.000000
+active num = 568737 iteration num = 34
+compute time = 0.028752
+source = 51007 sink = 130530 res = 1000000000.000000
+active num = 18365 iteration num = 9
+compute time = 0.005386
+source = 42254 sink = 35423 res = 0.000000
+active num = 2115 iteration num = 6
+compute time = 0.007675
+source = 325206 sink = 71055 res = 1000000000.000000
+active num = 11480 iteration num = 20
+compute time = 0.010223
+source = 166988 sink = 273178 res = 1000000000.000000
+active num = 268651 iteration num = 35
+compute time = 0.030887
+source = 199449 sink = 96375 res = 0.000000
+active num = 184996 iteration num = 40
+compute time = 0.033137
+source = 207559 sink = 170685 res = 1000000000.000000
+active num = 43 iteration num = 10
+compute time = 0.005493
+source = 160689 sink = 316693 res = 1000000000.000000
+active num = 508454 iteration num = 40
+compute time = 0.030816
+source = 95230 sink = 251120 res = 0.000000
+active num = 35060 iteration num = 29
+compute time = 0.028865
+source = 171485 sink = 250650 res = 1000000000.000000
+active num = 422042 iteration num = 36
+compute time = 0.030988
+source = 130297 sink = 290243 res = 1000000000.000000
+active num = 562518 iteration num = 68
+compute time = 0.056910
+source = 92235 sink = 114745 res = 0.000000
+active num = 14303 iteration num = 36
+compute time = 0.027864
+source = 262960 sink = 299195 res = 1000000000.000000
+active num = 536156 iteration num = 37
+compute time = 0.035270
+source = 22709 sink = 309060 res = 0.000000
+active num = 13991 iteration num = 21
+compute time = 0.017375
+source = 171241 sink = 28016 res = 1000000000.000000
+active num = 381048 iteration num = 40
+compute time = 0.032871
+source = 62576 sink = 215918 res = 1000000000.000000
+active num = 470042 iteration num = 52
+compute time = 0.034254
+source = 289821 sink = 113584 res = 1000000000.000000
+active num = 328 iteration num = 4
+compute time = 0.003769
+source = 20891 sink = 6518 res = 0.000000
+active num = 14636 iteration num = 36
+compute time = 0.021380
+source = 149008 sink = 20541 res = 0.000000
+active num = 61050 iteration num = 31
+compute time = 0.025411
+source = 77573 sink = 315996 res = 1000000000.000000
+active num = 463068 iteration num = 43
+compute time = 0.028948
+source = 293720 sink = 277022 res = 1000000000.000000
+active num = 413463 iteration num = 34
+compute time = 0.024352
+source = 86814 sink = 175722 res = 1000000000.000000
+active num = 302294 iteration num = 45
+compute time = 0.025586
+source = 122151 sink = 247504 res = 1000000000.000000
+active num = 430399 iteration num = 58
+compute time = 0.030897
+source = 166859 sink = 217382 res = 1000000000.000000
+active num = 578947 iteration num = 39
+compute time = 0.030884
+source = 173068 sink = 12787 res = 1000000000.000000
+active num = 477049 iteration num = 41
+compute time = 0.028604
+source = 142475 sink = 303365 res = 0.000000
+active num = 28955 iteration num = 35
+compute time = 0.024663
+source = 303031 sink = 234711 res = 1000000000.000000
+active num = 1397797 iteration num = 53
+compute time = 0.048134
+source = 92553 sink = 240435 res = 0.000000
+active num = 22331 iteration num = 26
+compute time = 0.011423
+source = 208349 sink = 115263 res = 1000000000.000000
+active num = 408210 iteration num = 35
+compute time = 0.025055
+source = 223938 sink = 54034 res = 1000000000.000000
+active num = 35668 iteration num = 24
+compute time = 0.010093
+source = 143279 sink = 286514 res = 0.000000
+active num = 54322 iteration num = 30
+compute time = 0.017559
+source = 269952 sink = 107543 res = 1000000000.000000
+active num = 531396 iteration num = 35
+compute time = 0.031618
+source = 74542 sink = 290843 res = 1000000000.000000
+active num = 2 iteration num = 2
+compute time = 0.002611
+source = 114062 sink = 223550 res = 1000000000.000000
+active num = 403876 iteration num = 41
+compute time = 0.032041
+source = 311384 sink = 191635 res = 0.000000
+active num = 19734 iteration num = 32
+compute time = 0.015986
+source = 213989 sink = 279548 res = 0.000000
+active num = 286431 iteration num = 39
+compute time = 0.027975
+source = 143101 sink = 300804 res = 1000000000.000000
+active num = 400247 iteration num = 41
+compute time = 0.028230
+source = 129713 sink = 265253 res = 1000000000.000000
+active num = 265836 iteration num = 63
+compute time = 0.048672
+source = 222752 sink = 296573 res = 1000000000.000000
+active num = 2 iteration num = 2
+compute time = 0.003274
+source = 157078 sink = 70263 res = 1000000000.000000
+active num = 651102 iteration num = 42
+compute time = 0.036098
+source = 309361 sink = 299554 res = 0.000000
+active num = 11922 iteration num = 22
+compute time = 0.015930
+source = 48071 sink = 286835 res = 1000000000.000000
+active num = 255766 iteration num = 31
+compute time = 0.019987
+source = 208708 sink = 140625 res = 0.000000
+active num = 9105 iteration num = 21
+compute time = 0.020036
+source = 201713 sink = 91500 res = 0.000000
+active num = 263935 iteration num = 37
+compute time = 0.026328
+source = 255888 sink = 100095 res = 1000000000.000000
+active num = 472980 iteration num = 32
+compute time = 0.030125
+source = 145534 sink = 73610 res = 1000000000.000000
+active num = 2 iteration num = 2
+compute time = 0.000822
+source = 61052 sink = 89930 res = 1000000000.000000
+active num = 304965 iteration num = 38
+compute time = 0.027138
+source = 181154 sink = 135594 res = 1000000000.000000
+active num = 406 iteration num = 15
+compute time = 0.005365
+source = 55216 sink = 295216 res = 1000000000.000000
+active num = 18560 iteration num = 11
+compute time = 0.008804
+source = 33588 sink = 41044 res = 0.000000
+active num = 25 iteration num = 4
+compute time = 0.001361
+source = 161295 sink = 247578 res = 1000000000.000000
+active num = 422000 iteration num = 32
+compute time = 0.024788
+source = 320592 sink = 304397 res = 0.000000
+active num = 85272 iteration num = 28
+compute time = 0.019732
+source = 222825 sink = 124749 res = 1000000000.000000
+active num = 589469 iteration num = 43
+compute time = 0.029505
+source = 244093 sink = 120020 res = 1000000000.000000
+active num = 381101 iteration num = 57
+compute time = 0.041514
+source = 95765 sink = 75614 res = 1000000000.000000
+active num = 169 iteration num = 12
+compute time = 0.009311
+source = 190284 sink = 79570 res = 1000000000.000000
+active num = 369012 iteration num = 38
+compute time = 0.021797
+source = 49611 sink = 238356 res = 1000000000.000000
+active num = 422319 iteration num = 33
+compute time = 0.022094
+source = 40849 sink = 258319 res = 0.000000
+active num = 78083 iteration num = 43
+compute time = 0.031022
+source = 53424 sink = 242563 res = 1000000000.000000
+active num = 440682 iteration num = 40
+compute time = 0.032045
+source = 24263 sink = 309313 res = 1000000000.000000
+active num = 434543 iteration num = 31
+compute time = 0.021389
+source = 17101 sink = 169798 res = 1000000000.000000
+active num = 471333 iteration num = 41
+compute time = 0.031814
+source = 57366 sink = 78153 res = 1000000000.000000
+active num = 18365 iteration num = 9
+compute time = 0.007034
+source = 259728 sink = 238520 res = 1000000000.000000
+active num = 422319 iteration num = 33
+compute time = 0.024193
+source = 213748 sink = 314945 res = 1000000000.000000
+active num = 435176 iteration num = 38
+compute time = 0.025590
+source = 208180 sink = 247336 res = 0.000000
+active num = 165687 iteration num = 34
+compute time = 0.019072
+source = 30433 sink = 43918 res = 0.000000
+active num = 12947 iteration num = 15
+compute time = 0.008055
+source = 169358 sink = 25469 res = 1000000000.000000
+active num = 18 iteration num = 6
+compute time = 0.003304
+source = 22758 sink = 66626 res = 1000000000.000000
+active num = 417469 iteration num = 51
+compute time = 0.033202
+source = 150218 sink = 266851 res = 1000000000.000000
+active num = 295629 iteration num = 34
+compute time = 0.020050
+source = 186647 sink = 245984 res = 0.000000
+active num = 53157 iteration num = 28
+compute time = 0.016094
+source = 16909 sink = 51375 res = 1000000000.000000
+active num = 29899 iteration num = 23
+compute time = 0.018492
+source = 325554 sink = 66520 res = 1000000000.000000
+active num = 29828 iteration num = 20
+compute time = 0.008435
+source = 289731 sink = 40847 res = 1000000000.000000
+active num = 591511 iteration num = 40
+compute time = 0.032260
+source = 324840 sink = 17598 res = 0.000000
+active num = 58351 iteration num = 35
+compute time = 0.019630
+source = 283410 sink = 23547 res = 1000000000.000000
+active num = 26 iteration num = 6
+compute time = 0.015556
+source = 1354 sink = 300511 res = 1000000000.000000
+active num = 948189 iteration num = 43
+compute time = 0.034097
+source = 193345 sink = 58721 res = 1000000000.000000
+active num = 29834 iteration num = 19
+compute time = 0.010366
+source = 53108 sink = 127517 res = 1000000000.000000
+active num = 26841 iteration num = 26
+compute time = 0.015068
+source = 297242 sink = 266857 res = 1000000000.000000
+active num = 295629 iteration num = 34
+compute time = 0.028476
+source = 116906 sink = 179865 res = 0.000000
+active num = 4226 iteration num = 20
+compute time = 0.012269
+source = 188637 sink = 147339 res = 1000000000.000000
+active num = 2 iteration num = 2
+compute time = 0.000879
+source = 223783 sink = 32438 res = 1000000000.000000
+active num = 584837 iteration num = 43
+compute time = 0.030653
+source = 172808 sink = 246542 res = 0.000000
+active num = 23965 iteration num = 43
+compute time = 0.028652
+source = 99065 sink = 323026 res = 1000000000.000000
+active num = 634809 iteration num = 32
+compute time = 0.030385
+source = 187836 sink = 285713 res = 1000000000.000000
+active num = 255892 iteration num = 47
+compute time = 0.029884
+source = 243454 sink = 204746 res = 0.000000
+active num = 33032 iteration num = 34
+compute time = 0.016184
+source = 11531 sink = 243452 res = 1000000000.000000
+active num = 422108 iteration num = 35
+compute time = 0.023654
+source = 271266 sink = 301262 res = 1000000000.000000
+active num = 13 iteration num = 5
+compute time = 0.002702
+source = 284299 sink = 270550 res = 0.000000
+active num = 138042 iteration num = 39
+compute time = 0.025974
+source = 318861 sink = 242152 res = 0.000000
+active num = 151647 iteration num = 32
+compute time = 0.024004
+source = 294097 sink = 320216 res = 1000000000.000000
+active num = 657478 iteration num = 37
+compute time = 0.034348
+source = 217107 sink = 161885 res = 1000000000.000000
+active num = 270657 iteration num = 39
+compute time = 0.028232
+source = 53380 sink = 270216 res = 1000000000.000000
+active num = 436566 iteration num = 48
+compute time = 0.036999
+source = 289403 sink = 25066 res = 1000000000.000000
+active num = 577054 iteration num = 44
+compute time = 0.036096
+source = 211516 sink = 80752 res = 1000000000.000000
+active num = 12242 iteration num = 21
+compute time = 0.014860
+source = 204931 sink = 74597 res = 1000000000.000000
+active num = 800 iteration num = 12
+compute time = 0.008687
+source = 228091 sink = 103158 res = 1000000000.000000
+active num = 271050 iteration num = 28
+compute time = 0.016834
+source = 107035 sink = 75342 res = 1000000000.000000
+active num = 380891 iteration num = 53
+compute time = 0.036222
+source = 24143 sink = 206101 res = 1000000000.000000
+active num = 78 iteration num = 5
+compute time = 0.001752
+source = 72812 sink = 211980 res = 1000000000.000000
+active num = 323804 iteration num = 42
+compute time = 0.029120
+source = 166257 sink = 316267 res = 1000000000.000000
+active num = 433695 iteration num = 35
+compute time = 0.021267
+source = 91169 sink = 177788 res = 1000000000.000000
+active num = 393805 iteration num = 41
+compute time = 0.034948
+source = 234162 sink = 36879 res = 0.000000
+active num = 86616 iteration num = 42
+compute time = 0.022647
+source = 153494 sink = 192905 res = 1000000000.000000
+active num = 4 iteration num = 4
+compute time = 0.001355
+source = 307429 sink = 146799 res = 1000000000.000000
+active num = 528122 iteration num = 39
+compute time = 0.027546
+source = 109501 sink = 275969 res = 1000000000.000000
+active num = 383425 iteration num = 44
+compute time = 0.025874
+source = 141458 sink = 1052 res = 1000000000.000000
+active num = 379677 iteration num = 44
+compute time = 0.031099
+source = 112298 sink = 194839 res = 0.000000
+active num = 10161 iteration num = 31
+compute time = 0.015561
+source = 271268 sink = 76145 res = 1000000000.000000
+active num = 11481 iteration num = 16
+compute time = 0.011652
+source = 219905 sink = 157227 res = 1000000000.000000
+active num = 417282 iteration num = 42
+compute time = 0.027537
+source = 156897 sink = 99280 res = 0.000000
+active num = 70177 iteration num = 34
+compute time = 0.019150
+source = 231824 sink = 59432 res = 1000000000.000000
+active num = 548237 iteration num = 60
+compute time = 0.038379
+source = 202438 sink = 13303 res = 1000000000.000000
+active num = 365 iteration num = 8
+compute time = 0.003931
+source = 134775 sink = 226582 res = 1000000000.000000
+active num = 386950 iteration num = 38
+compute time = 0.026490
+source = 219404 sink = 207588 res = 1000000000.000000
+active num = 402526 iteration num = 36
+compute time = 0.024065
+source = 113006 sink = 60105 res = 1000000000.000000
+active num = 441469 iteration num = 59
+compute time = 0.035807
+source = 198298 sink = 204175 res = 1000000000.000000
+active num = 295874 iteration num = 42
+compute time = 0.024170
+source = 237894 sink = 106904 res = 1000000000.000000
+active num = 372678 iteration num = 41
+compute time = 0.022337
+source = 241054 sink = 65831 res = 1000000000.000000
+active num = 402451 iteration num = 52
+compute time = 0.033681
+source = 299810 sink = 222927 res = 1000000000.000000
+active num = 368454 iteration num = 39
+compute time = 0.024493
+source = 212631 sink = 83754 res = 1000000000.000000
+active num = 2 iteration num = 2
+compute time = 0.000868
+source = 173339 sink = 28532 res = 1000000000.000000
+active num = 105 iteration num = 5
+compute time = 0.002433
+source = 84806 sink = 285638 res = 1000000000.000000
+active num = 255760 iteration num = 30
+compute time = 0.021800
+source = 223372 sink = 30517 res = 0.000000
+active num = 98852 iteration num = 28
+compute time = 0.014874
+source = 36226 sink = 117721 res = 0.000000
+active num = 23428 iteration num = 38
+compute time = 0.025251
+source = 187745 sink = 193124 res = 1000000000.000000
+active num = 15 iteration num = 6
+compute time = 0.002361
+source = 217002 sink = 94013 res = 1000000000.000000
+active num = 733461 iteration num = 45
+compute time = 0.036391
+source = 252556 sink = 93883 res = 0.000000
+active num = 16496 iteration num = 32
+compute time = 0.015701
+source = 107317 sink = 61774 res = 1000000000.000000
+active num = 29834 iteration num = 19
+compute time = 0.012429
+source = 320466 sink = 1165 res = 0.000000
+active num = 74128 iteration num = 30
+compute time = 0.015310
+source = 269362 sink = 107915 res = 1000000000.000000
+active num = 472879 iteration num = 37
+compute time = 0.025267
+source = 61270 sink = 142104 res = 1000000000.000000
+active num = 601017 iteration num = 46
+compute time = 0.035398
+source = 312090 sink = 299164 res = 1000000000.000000
+active num = 378273 iteration num = 38
+compute time = 0.024552
+source = 249009 sink = 227588 res = 0.000000
+active num = 27383 iteration num = 22
+compute time = 0.019355
+source = 39439 sink = 223262 res = 1000000000.000000
+active num = 362759 iteration num = 47
+compute time = 0.027464
+source = 124959 sink = 252070 res = 1000000000.000000
+active num = 423125 iteration num = 32
+compute time = 0.023069
+source = 307016 sink = 298299 res = 1000000000.000000
+active num = 580888 iteration num = 38
+compute time = 0.025453
+source = 280603 sink = 66266 res = 1000000000.000000
+active num = 29846 iteration num = 21
+compute time = 0.008506
+source = 258380 sink = 178418 res = 0.000000
+active num = 59311 iteration num = 36
+compute time = 0.020156
+source = 96784 sink = 294607 res = 1000000000.000000
+active num = 387908 iteration num = 36
+compute time = 0.032332
+source = 296140 sink = 284529 res = 1000000000.000000
+active num = 255759 iteration num = 32
+compute time = 0.033582
+source = 162174 sink = 187585 res = 0.000000
+active num = 87288 iteration num = 40
+compute time = 0.024686
+source = 52986 sink = 89173 res = 1000000000.000000
+active num = 292026 iteration num = 37
+compute time = 0.023991
+source = 281469 sink = 160303 res = 1000000000.000000
+active num = 2 iteration num = 2
+compute time = 0.000757
+source = 150948 sink = 276379 res = 1000000000.000000
+active num = 438639 iteration num = 34
+compute time = 0.027214
+source = 161468 sink = 94754 res = 1000000000.000000
+active num = 723150 iteration num = 37
+compute time = 0.028132
+source = 58737 sink = 222739 res = 1000000000.000000
+active num = 781988 iteration num = 41
+compute time = 0.035855
+source = 236859 sink = 45271 res = 0.000000
+active num = 31387 iteration num = 37
+compute time = 0.020691
+source = 196346 sink = 160311 res = 1000000000.000000
+active num = 114 iteration num = 6
+compute time = 0.008474
+source = 272860 sink = 235785 res = 0.000000
+active num = 9637 iteration num = 26
+compute time = 0.011500
+source = 58016 sink = 72262 res = 1000000000.000000
+active num = 18365 iteration num = 9
+compute time = 0.007770
+source = 162298 sink = 39476 res = 0.000000
+active num = 34614 iteration num = 40
+compute time = 0.025398
+source = 45004 sink = 117344 res = 1000000000.000000
+active num = 16 iteration num = 7
+compute time = 0.002877
+source = 105743 sink = 303385 res = 0.000000
+active num = 7950 iteration num = 32
+compute time = 0.023489
+source = 295763 sink = 202527 res = 1000000000.000000
+active num = 732 iteration num = 8
+compute time = 0.004245
+source = 272435 sink = 266347 res = 1000000000.000000
+active num = 295632 iteration num = 36
+compute time = 0.023567
+source = 161500 sink = 109052 res = 1000000000.000000
+active num = 472876 iteration num = 36
+compute time = 0.024953
+source = 128375 sink = 214487 res = 1000000000.000000
+active num = 460085 iteration num = 65
+compute time = 0.042367
+source = 198226 sink = 84288 res = 1000000000.000000
+active num = 11481 iteration num = 16
+compute time = 0.017323
+source = 49233 sink = 23617 res = 0.000000
+active num = 97100 iteration num = 35
+compute time = 0.016106
+source = 35110 sink = 210702 res = 0.000000
+active num = 28245 iteration num = 35
+compute time = 0.024732
+source = 118371 sink = 93848 res = 1000000000.000000
+active num = 732184 iteration num = 44
+compute time = 0.030736
+source = 107884 sink = 29674 res = 1000000000.000000
+active num = 383487 iteration num = 43
+compute time = 0.029214
+source = 139119 sink = 304231 res = 0.000000
+active num = 3619 iteration num = 26
+compute time = 0.015597
+source = 189985 sink = 86422 res = 1000000000.000000
+active num = 11848 iteration num = 39
+compute time = 0.029856
+source = 214459 sink = 248002 res = 0.000000
+active num = 123515 iteration num = 37
+compute time = 0.022422
+source = 158685 sink = 51201 res = 1000000000.000000
+active num = 29826 iteration num = 18
+compute time = 0.015882
+source = 287478 sink = 203689 res = 1000000000.000000
+active num = 481823 iteration num = 46
+compute time = 0.042785
+source = 168545 sink = 67664 res = 1000000000.000000
+active num = 29829 iteration num = 19
+compute time = 0.011113
+source = 181517 sink = 138752 res = 1000000000.000000
+active num = 412552 iteration num = 41
+compute time = 0.036258
+source = 270192 sink = 128395 res = 1000000000.000000
+active num = 321 iteration num = 18
+compute time = 0.009569
+source = 79542 sink = 106135 res = 1000000000.000000
+active num = 271461 iteration num = 29
+compute time = 0.024022
+source = 237448 sink = 207918 res = 1000000000.000000
+active num = 372625 iteration num = 37
+compute time = 0.027841
+source = 320623 sink = 110117 res = 0.000000
+active num = 252367 iteration num = 36
+compute time = 0.024896
+source = 292207 sink = 44300 res = 1000000000.000000
+active num = 418374 iteration num = 36
+compute time = 0.030351
+source = 133734 sink = 1760 res = 1000000000.000000
+active num = 432310 iteration num = 42
+compute time = 0.030038
+source = 255002 sink = 252106 res = 0.000000
+active num = 19446 iteration num = 28
+compute time = 0.017888
+source = 95608 sink = 37330 res = 1000000000.000000
+active num = 593417 iteration num = 36
+compute time = 0.037448
+source = 281780 sink = 234728 res = 1000000000.000000
+active num = 627726 iteration num = 47
+compute time = 0.038599
+source = 16005 sink = 146209 res = 1000000000.000000
+active num = 16 iteration num = 5
+compute time = 0.001619
+source = 321151 sink = 230464 res = 1000000000.000000
+active num = 466278 iteration num = 37
+compute time = 0.025201
+source = 68654 sink = 154279 res = 1000000000.000000
+active num = 527560 iteration num = 44
+compute time = 0.029580
+source = 281665 sink = 30576 res = 0.000000
+active num = 53012 iteration num = 33
+compute time = 0.026852
+source = 32412 sink = 124654 res = 1000000000.000000
+active num = 371218 iteration num = 68
+compute time = 0.037204
+source = 98241 sink = 213929 res = 1000000000.000000
+active num = 387379 iteration num = 40
+compute time = 0.023506
+source = 263406 sink = 42876 res = 0.000000
+active num = 34696 iteration num = 37
+compute time = 0.020421
+source = 16768 sink = 17392 res = 0.000000
+active num = 329855 iteration num = 49
+compute time = 0.025882
+source = 149012 sink = 254217 res = 1000000000.000000
+active num = 422319 iteration num = 33
+compute time = 0.022092
+source = 225310 sink = 144078 res = 1000000000.000000
+active num = 3 iteration num = 3
+compute time = 0.002828
+source = 38777 sink = 191960 res = 0.000000
+active num = 109810 iteration num = 44
+compute time = 0.020774
+source = 188378 sink = 172512 res = 1000000000.000000
+active num = 453131 iteration num = 33
+compute time = 0.025795
+source = 193721 sink = 117824 res = 1000000000.000000
+active num = 436643 iteration num = 31
+compute time = 0.021258
+source = 99062 sink = 289330 res = 1000000000.000000
+active num = 564776 iteration num = 33
+compute time = 0.027546
+source = 155155 sink = 55286 res = 1000000000.000000
+active num = 683751 iteration num = 51
+compute time = 0.033099
+source = 198501 sink = 171160 res = 1000000000.000000
+active num = 4 iteration num = 4
+compute time = 0.001423
+source = 201495 sink = 194095 res = 1000000000.000000
+active num = 531120 iteration num = 41
+compute time = 0.028539
+source = 76068 sink = 270149 res = 1000000000.000000
+active num = 418250 iteration num = 42
+compute time = 0.027271
+source = 22818 sink = 32177 res = 0.000000
+active num = 37707 iteration num = 27
+compute time = 0.012131
+source = 300726 sink = 55230 res = 1000000000.000000
+active num = 29831 iteration num = 21
+compute time = 0.015524
+source = 156831 sink = 73410 res = 1000000000.000000
+active num = 659754 iteration num = 49
+compute time = 0.043605
+source = 269160 sink = 94681 res = 1000000000.000000
+active num = 575867 iteration num = 33
+compute time = 0.024081
+source = 116286 sink = 285929 res = 0.000000
+active num = 82288 iteration num = 30
+compute time = 0.013578
+source = 112073 sink = 265299 res = 0.000000
+active num = 17523 iteration num = 38
+compute time = 0.016753
+source = 214589 sink = 11826 res = 1000000000.000000
+active num = 515932 iteration num = 47
+compute time = 0.030716
+source = 83820 sink = 253367 res = 1000000000.000000
+active num = 452782 iteration num = 44
+compute time = 0.026002
+source = 203786 sink = 272199 res = 1000000000.000000
+active num = 531094 iteration num = 40
+compute time = 0.027700
+source = 100322 sink = 71951 res = 1000000000.000000
+active num = 2 iteration num = 2
+compute time = 0.000989
+source = 64466 sink = 199384 res = 1000000000.000000
+active num = 388133 iteration num = 48
+compute time = 0.039812
+source = 35724 sink = 219622 res = 1000000000.000000
+active num = 362746 iteration num = 46
+compute time = 0.036215
+source = 254670 sink = 234225 res = 1000000000.000000
+active num = 577364 iteration num = 48
+compute time = 0.038117
+source = 65226 sink = 130609 res = 1000000000.000000
+active num = 18373 iteration num = 11
+compute time = 0.004693
+source = 102764 sink = 141294 res = 1000000000.000000
+active num = 578482 iteration num = 37
+compute time = 0.037843
+source = 75202 sink = 125583 res = 1000000000.000000
+active num = 8479 iteration num = 17
+compute time = 0.008781
+source = 173471 sink = 50371 res = 1000000000.000000
+active num = 708380 iteration num = 55
+compute time = 0.040017
+source = 180813 sink = 4746 res = 0.000000
+active num = 7873 iteration num = 30
+compute time = 0.022795
+source = 123781 sink = 124417 res = 1000000000.000000
+active num = 8405 iteration num = 28
+compute time = 0.017059
+source = 99427 sink = 240068 res = 0.000000
+active num = 22302 iteration num = 27
+compute time = 0.019139
+source = 84789 sink = 211501 res = 1000000000.000000
+active num = 329523 iteration num = 47
+compute time = 0.025619
+source = 179810 sink = 299379 res = 1000000000.000000
+active num = 394464 iteration num = 38
+compute time = 0.026450
+source = 223327 sink = 263631 res = 0.000000
+active num = 8930 iteration num = 18
+compute time = 0.014486
+source = 227189 sink = 101557 res = 1000000000.000000
+active num = 271590 iteration num = 30
+compute time = 0.017211
+source = 210273 sink = 1954 res = 1000000000.000000
+active num = 1790 iteration num = 29
+compute time = 0.020169
+source = 173508 sink = 274740 res = 1000000000.000000
+active num = 550352 iteration num = 34
+compute time = 0.027408
+source = 201339 sink = 209233 res = 1000000000.000000
+active num = 531095 iteration num = 41
+compute time = 0.033986
+source = 168806 sink = 130453 res = 1000000000.000000
+active num = 8499 iteration num = 24
+compute time = 0.012081
+source = 117901 sink = 234032 res = 1000000000.000000
+active num = 2099 iteration num = 6
+compute time = 0.002659
+source = 261063 sink = 220666 res = 1000000000.000000
+active num = 391757 iteration num = 38
+compute time = 0.027030
+source = 49769 sink = 10708 res = 1000000000.000000
+active num = 583865 iteration num = 51
+compute time = 0.045314
+source = 20692 sink = 223241 res = 1000000000.000000
+active num = 387058 iteration num = 40
+compute time = 0.031058
+source = 61079 sink = 201506 res = 1000000000.000000
+active num = 496573 iteration num = 56
+compute time = 0.037818
+source = 227987 sink = 184861 res = 1000000000.000000
+active num = 5865 iteration num = 12
+compute time = 0.007487
+source = 366 sink = 1858 res = 1000000000.000000
+active num = 387751 iteration num = 45
+compute time = 0.029490
+source = 99372 sink = 85156 res = 1000000000.000000
+active num = 398831 iteration num = 57
+compute time = 0.041725
+source = 213359 sink = 279183 res = 0.000000
+active num = 71787 iteration num = 31
+compute time = 0.015767
+source = 58978 sink = 111130 res = 1000000000.000000
+active num = 491219 iteration num = 42
+compute time = 0.024926
+source = 217257 sink = 286167 res = 1000000000.000000
+active num = 543238 iteration num = 42
+compute time = 0.038753
+source = 212687 sink = 101974 res = 1000000000.000000
+active num = 3 iteration num = 3
+compute time = 0.001118
+source = 288122 sink = 60639 res = 1000000000.000000
+active num = 33447 iteration num = 24
+compute time = 0.015895
+source = 51157 sink = 163905 res = 1000000000.000000
+active num = 18375 iteration num = 13
+compute time = 0.008069
+source = 269872 sink = 219963 res = 1000000000.000000
+active num = 895334 iteration num = 40
+compute time = 0.036301
+source = 294358 sink = 62217 res = 1000000000.000000
+active num = 29828 iteration num = 18
+compute time = 0.010740
+source = 128439 sink = 229864 res = 1000000000.000000
+active num = 327132 iteration num = 62
+compute time = 0.030578
+source = 282884 sink = 178208 res = 1000000000.000000
+active num = 44 iteration num = 11
+compute time = 0.005540
+source = 240573 sink = 303576 res = 0.000000
+active num = 31795 iteration num = 24
+compute time = 0.016718
+source = 75893 sink = 301653 res = 1000000000.000000
+active num = 709909 iteration num = 36
+compute time = 0.030439
+source = 179526 sink = 303881 res = 1000000000.000000
+active num = 2 iteration num = 2
+compute time = 0.000806
+source = 160957 sink = 179892 res = 1000000000.000000
+active num = 272267 iteration num = 30
+compute time = 0.021094
+source = 305740 sink = 260330 res = 0.000000
+active num = 15713 iteration num = 23
+compute time = 0.014616
+source = 265048 sink = 193542 res = 1000000000.000000
+active num = 13 iteration num = 6
+compute time = 0.002058
+source = 213956 sink = 324026 res = 1000000000.000000
+active num = 286004 iteration num = 31
+compute time = 0.022071
+source = 304673 sink = 105656 res = 0.000000
+active num = 1097 iteration num = 12
+compute time = 0.004408
+source = 284637 sink = 191804 res = 1000000000.000000
+active num = 3615 iteration num = 8
+compute time = 0.003310
+source = 207630 sink = 247203 res = 1000000000.000000
+active num = 421996 iteration num = 32
+compute time = 0.024388
+source = 252443 sink = 258788 res = 0.000000
+active num = 142898 iteration num = 27
+compute time = 0.018494
+source = 85551 sink = 196759 res = 1000000000.000000
+active num = 10 iteration num = 4
+compute time = 0.001697
+source = 153195 sink = 54353 res = 1000000000.000000
+active num = 29826 iteration num = 18
+compute time = 0.012161
+source = 258977 sink = 281634 res = 0.000000
+active num = 7775 iteration num = 28
+compute time = 0.017721
+source = 284218 sink = 216304 res = 1000000000.000000
+active num = 528765 iteration num = 44
+compute time = 0.034792
+source = 134286 sink = 199234 res = 0.000000
+active num = 147760 iteration num = 29
+compute time = 0.016789
+source = 194324 sink = 210180 res = 1000000000.000000
+active num = 298933 iteration num = 40
+compute time = 0.025782
+source = 175330 sink = 48293 res = 0.000000
+active num = 19795 iteration num = 28
+compute time = 0.011979
+source = 188504 sink = 10731 res = 1000000000.000000
+active num = 550764 iteration num = 39
+compute time = 0.028885
+source = 228186 sink = 168687 res = 1000000000.000000
+active num = 2 iteration num = 2
+compute time = 0.003594
+source = 271061 sink = 167677 res = 1000000000.000000
+active num = 2 iteration num = 2
+compute time = 0.000837
+source = 36673 sink = 159461 res = 0.000000
+active num = 48190 iteration num = 45
+compute time = 0.024651
+source = 166147 sink = 15789 res = 1000000000.000000
+active num = 40 iteration num = 9
+compute time = 0.009712
+source = 265117 sink = 125228 res = 1000000000.000000
+active num = 2 iteration num = 2
+compute time = 0.000834
+source = 207593 sink = 147191 res = 1000000000.000000
+active num = 7 iteration num = 4
+compute time = 0.001456
+source = 46874 sink = 134480 res = 1000000000.000000
+active num = 273543 iteration num = 31
+compute time = 0.018478
+source = 80423 sink = 132425 res = 1000000000.000000
+active num = 29844 iteration num = 13
+compute time = 0.008328
+source = 5683 sink = 233618 res = 1000000000.000000
+active num = 2101 iteration num = 8
+compute time = 0.005423
+source = 186778 sink = 264660 res = 1000000000.000000
+active num = 34 iteration num = 7
+compute time = 0.002650
+source = 189696 sink = 145440 res = 1000000000.000000
+active num = 2 iteration num = 2
+compute time = 0.000917
+source = 155408 sink = 323982 res = 1000000000.000000
+active num = 648310 iteration num = 35
+compute time = 0.028266
+source = 19117 sink = 24176 res = 1000000000.000000
+active num = 359236 iteration num = 36
+compute time = 0.022961
+source = 208605 sink = 194448 res = 1000000000.000000
+active num = 404565 iteration num = 43
+compute time = 0.036172
+source = 72469 sink = 71553 res = 1000000000.000000
+active num = 29844 iteration num = 13
+compute time = 0.011722
+source = 205180 sink = 300656 res = 1000000000.000000
+active num = 638927 iteration num = 42
+compute time = 0.039931
+source = 240241 sink = 150684 res = 1000000000.000000
+active num = 372626 iteration num = 39
+compute time = 0.029922
+source = 142776 sink = 276914 res = 0.000000
+active num = 11562 iteration num = 23
+compute time = 0.013924
+source = 310145 sink = 308924 res = 0.000000
+active num = 7139 iteration num = 27
+compute time = 0.020052
+source = 292703 sink = 249706 res = 1000000000.000000
+active num = 423125 iteration num = 32
+compute time = 0.027981
+source = 108595 sink = 174740 res = 1000000000.000000
+active num = 594479 iteration num = 42
+compute time = 0.032216
+source = 71341 sink = 155470 res = 1000000000.000000
+active num = 444670 iteration num = 51
+compute time = 0.035895
+source = 309220 sink = 151764 res = 1000000000.000000
+active num = 536037 iteration num = 39
+compute time = 0.025876
+source = 287895 sink = 314903 res = 1000000000.000000
+active num = 512003 iteration num = 38
+compute time = 0.030754
+source = 59826 sink = 149117 res = 1000000000.000000
+active num = 18365 iteration num = 9
+compute time = 0.007117
+source = 254007 sink = 249522 res = 0.000000
+active num = 11273 iteration num = 25
+compute time = 0.019395
+source = 294557 sink = 83858 res = 1000000000.000000
+active num = 11481 iteration num = 16
+compute time = 0.008904
+source = 247948 sink = 313675 res = 0.000000
+active num = 7817 iteration num = 17
+compute time = 0.013346
+source = 108034 sink = 130997 res = 1000000000.000000
+active num = 594592 iteration num = 38
+compute time = 0.033431
+source = 182567 sink = 180504 res = 1000000000.000000
+active num = 8 iteration num = 6
+compute time = 0.002043
+source = 202550 sink = 62190 res = 1000000000.000000
+active num = 30192 iteration num = 24
+compute time = 0.014865
+source = 155603 sink = 117234 res = 0.000000
+active num = 23122 iteration num = 38
+compute time = 0.028028
+source = 212875 sink = 298380 res = 1000000000.000000
+active num = 393680 iteration num = 45
+compute time = 0.024247
+source = 68592 sink = 197464 res = 1000000000.000000
+active num = 2 iteration num = 2
+compute time = 0.000911
+source = 281747 sink = 35738 res = 0.000000
+active num = 40537 iteration num = 36
+compute time = 0.025264
+source = 121613 sink = 64786 res = 1000000000.000000
+active num = 38229 iteration num = 43
+compute time = 0.026046
+source = 210479 sink = 192954 res = 1000000000.000000
+active num = 1675 iteration num = 16
+compute time = 0.010527
+source = 220256 sink = 194142 res = 1000000000.000000
+active num = 2 iteration num = 2
+compute time = 0.000771
+source = 19162 sink = 182595 res = 1000000000.000000
+active num = 359225 iteration num = 36
+compute time = 0.025313
+source = 183489 sink = 78988 res = 1000000000.000000
+active num = 11481 iteration num = 18
+compute time = 0.014896
+source = 6156 sink = 111939 res = 1000000000.000000
+active num = 571884 iteration num = 33
+compute time = 0.024735
+source = 2953 sink = 300714 res = 1000000000.000000
+active num = 5 iteration num = 3
+compute time = 0.001127
+source = 195798 sink = 250902 res = 0.000000
+active num = 51489 iteration num = 32
+compute time = 0.023144
+source = 288833 sink = 303833 res = 1000000000.000000
+active num = 43 iteration num = 5
+compute time = 0.007504
+source = 56342 sink = 145843 res = 1000000000.000000
+active num = 18365 iteration num = 9
+compute time = 0.007265
+source = 158780 sink = 258893 res = 1000000000.000000
+active num = 839148 iteration num = 46
+compute time = 0.035509
+source = 208033 sink = 314384 res = 1000000000.000000
+active num = 433691 iteration num = 42
+compute time = 0.033869
+source = 50570 sink = 95352 res = 1000000000.000000
+active num = 18532 iteration num = 15
+compute time = 0.007431
+source = 287207 sink = 119162 res = 1000000000.000000
+active num = 3615 iteration num = 8
+compute time = 0.005395
+source = 292816 sink = 243398 res = 0.000000
+active num = 33049 iteration num = 28
+compute time = 0.014898
+source = 154901 sink = 88872 res = 0.000000
+active num = 21441 iteration num = 30
+compute time = 0.019535
+source = 308185 sink = 39824 res = 0.000000
+active num = 52691 iteration num = 36
+compute time = 0.018568
+source = 281827 sink = 202885 res = 1000000000.000000
+active num = 604616 iteration num = 44
+compute time = 0.038300
+source = 233966 sink = 300990 res = 1000000000.000000
+active num = 25 iteration num = 6
+compute time = 0.006231
+source = 59924 sink = 91899 res = 1000000000.000000
+active num = 750383 iteration num = 43
+compute time = 0.044660
+source = 54421 sink = 66080 res = 0.000000
+active num = 21 iteration num = 3
+compute time = 0.003351
+source = 203839 sink = 57375 res = 1000000000.000000
+active num = 560925 iteration num = 55
+compute time = 0.039713
+source = 41238 sink = 74081 res = 1000000000.000000
+active num = 362742 iteration num = 46
+compute time = 0.025750
+source = 308277 sink = 4514 res = 1000000000.000000
+active num = 529008 iteration num = 38
+compute time = 0.027483
+source = 52357 sink = 39063 res = 1000000000.000000
+active num = 436623 iteration num = 44
+compute time = 0.029111
+source = 150357 sink = 211138 res = 1000000000.000000
+active num = 299695 iteration num = 38
+compute time = 0.030288
+source = 297956 sink = 32834 res = 1000000000.000000
+active num = 579188 iteration num = 39
+compute time = 0.034290
+source = 199965 sink = 22970 res = 1000000000.000000
+active num = 2 iteration num = 2
+compute time = 0.000821
+source = 128186 sink = 161616 res = 1000000000.000000
+active num = 8406 iteration num = 25
+compute time = 0.012435
+source = 142133 sink = 95445 res = 1000000000.000000
+active num = 379854 iteration num = 49
+compute time = 0.032695
+source = 79458 sink = 297035 res = 1000000000.000000
+active num = 29818 iteration num = 14
+compute time = 0.009304
+source = 184318 sink = 62086 res = 1000000000.000000
+active num = 405683 iteration num = 58
+compute time = 0.038775
+source = 11302 sink = 140589 res = 1000000000.000000
+active num = 563138 iteration num = 34
+compute time = 0.036436
+source = 264972 sink = 245269 res = 0.000000
+active num = 18892 iteration num = 26
+compute time = 0.015077
+source = 116022 sink = 324896 res = 1000000000.000000
+active num = 391567 iteration num = 41
+compute time = 0.041986
+source = 11611 sink = 170444 res = 1000000000.000000
+active num = 2 iteration num = 2
+compute time = 0.000805
+source = 65419 sink = 215450 res = 1000000000.000000
+active num = 470043 iteration num = 49
+compute time = 0.034414
+source = 227820 sink = 106657 res = 1000000000.000000
+active num = 5877 iteration num = 15
+compute time = 0.011220
+source = 289531 sink = 210541 res = 1000000000.000000
+active num = 298933 iteration num = 39
+compute time = 0.024277
+source = 111171 sink = 16332 res = 1000000000.000000
+active num = 594592 iteration num = 38
+compute time = 0.038073
+source = 249604 sink = 261529 res = 0.000000
+active num = 20042 iteration num = 31
+compute time = 0.016277
+source = 227470 sink = 222004 res = 1000000000.000000
+active num = 5835 iteration num = 9
+compute time = 0.003625
+source = 294364 sink = 101879 res = 1000000000.000000
+active num = 2 iteration num = 2
+compute time = 0.000918
+source = 244974 sink = 96994 res = 1000000000.000000
+active num = 372928 iteration num = 41
+compute time = 0.026546
+source = 263496 sink = 61550 res = 1000000000.000000
+active num = 514983 iteration num = 54
+compute time = 0.035762
+source = 192440 sink = 17397 res = 1000000000.000000
+active num = 2 iteration num = 2
+compute time = 0.000825
+source = 33029 sink = 51202 res = 1000000000.000000
+active num = 392566 iteration num = 63
+compute time = 0.034603
+source = 79484 sink = 44331 res = 1000000000.000000
+active num = 608798 iteration num = 49
+compute time = 0.038791
+source = 191791 sink = 18899 res = 0.000000
+active num = 66448 iteration num = 35
+compute time = 0.032517
+source = 289600 sink = 307814 res = 1000000000.000000
+active num = 433201 iteration num = 31
+compute time = 0.022550
+source = 18238 sink = 301211 res = 1000000000.000000
+active num = 2 iteration num = 2
+compute time = 0.000781
+source = 152702 sink = 83658 res = 1000000000.000000
+active num = 11479 iteration num = 15
+compute time = 0.012160
+source = 191105 sink = 54966 res = 1000000000.000000
+active num = 405139 iteration num = 48
+compute time = 0.033955
+source = 190315 sink = 155080 res = 1000000000.000000
+active num = 712386 iteration num = 47
+compute time = 0.032542
+source = 265507 sink = 301487 res = 0.000000
+active num = 69182 iteration num = 34
+compute time = 0.025052
+source = 171413 sink = 189555 res = 1000000000.000000
+active num = 34 iteration num = 14
+compute time = 0.008561
+source = 237460 sink = 73327 res = 1000000000.000000
+active num = 384102 iteration num = 51
+compute time = 0.029051
+source = 86003 sink = 206267 res = 1000000000.000000
+active num = 502321 iteration num = 48
+compute time = 0.032178
+source = 175206 sink = 5420 res = 1000000000.000000
+active num = 727725 iteration num = 43
+compute time = 0.042501
+source = 303262 sink = 113146 res = 0.000000
+active num = 27236 iteration num = 28
+compute time = 0.022906
+source = 66971 sink = 170145 res = 1000000000.000000
+active num = 18365 iteration num = 9
+compute time = 0.006204
+source = 130543 sink = 100000 res = 1000000000.000000
+active num = 606114 iteration num = 36
+compute time = 0.032072
+source = 221347 sink = 210027 res = 0.000000
+active num = 248099 iteration num = 38
+compute time = 0.026847
+source = 144332 sink = 87582 res = 1000000000.000000
+active num = 5 iteration num = 4
+compute time = 0.005415
+source = 228927 sink = 108375 res = 1000000000.000000
+active num = 632781 iteration num = 39
+compute time = 0.030482
+source = 69839 sink = 247165 res = 1000000000.000000
+active num = 421996 iteration num = 32
+compute time = 0.028335
+source = 84030 sink = 222542 res = 1000000000.000000
+active num = 29820 iteration num = 13
+compute time = 0.011309
+source = 5266 sink = 275135 res = 1000000000.000000
+active num = 557524 iteration num = 49
+compute time = 0.034722
+source = 277508 sink = 195582 res = 1000000000.000000
+active num = 386454 iteration num = 39
+compute time = 0.030132
+source = 104659 sink = 217459 res = 1000000000.000000
+active num = 578923 iteration num = 36
+compute time = 0.027489
+source = 171513 sink = 276072 res = 1000000000.000000
+active num = 410961 iteration num = 40
+compute time = 0.027987
+source = 81457 sink = 83416 res = 1000000000.000000
+active num = 11479 iteration num = 16
+compute time = 0.008409
+source = 23842 sink = 167460 res = 1000000000.000000
+active num = 15 iteration num = 5
+compute time = 0.005184
+source = 289684 sink = 199049 res = 1000000000.000000
+active num = 208 iteration num = 5
+compute time = 0.003163
+source = 172881 sink = 267389 res = 1000000000.000000
+active num = 296029 iteration num = 38
+compute time = 0.034376
+source = 312195 sink = 239853 res = 0.000000
+active num = 16232 iteration num = 21
+compute time = 0.009162
+source = 111978 sink = 117181 res = 1000000000.000000
+active num = 432551 iteration num = 35
+compute time = 0.028891
+source = 14296 sink = 7768 res = 0.000000
+active num = 12529 iteration num = 35
+compute time = 0.018062
+source = 1652 sink = 158629 res = 1000000000.000000
+active num = 420770 iteration num = 51
+compute time = 0.038710
+source = 95350 sink = 230579 res = 1000000000.000000
+active num = 167 iteration num = 6
+compute time = 0.002003
+source = 267004 sink = 165190 res = 0.000000
+active num = 9152 iteration num = 26
+compute time = 0.013429
+source = 152188 sink = 25477 res = 1000000000.000000
+active num = 7 iteration num = 5
+compute time = 0.003305
+source = 62176 sink = 157455 res = 1000000000.000000
+active num = 509604 iteration num = 44
+compute time = 0.039994
+source = 300613 sink = 14127 res = 0.000000
+active num = 64017 iteration num = 46
+compute time = 0.054946
+source = 27480 sink = 79715 res = 1000000000.000000
+active num = 11481 iteration num = 17
+compute time = 0.009955
+source = 231586 sink = 198993 res = 1000000000.000000
+active num = 6041 iteration num = 11
+compute time = 0.010913
+source = 30230 sink = 313044 res = 0.000000
+active num = 24118 iteration num = 28
+compute time = 0.016440
+source = 282410 sink = 54073 res = 1000000000.000000
+active num = 29829 iteration num = 19
+compute time = 0.015263
+source = 154947 sink = 246538 res = 0.000000
+active num = 25830 iteration num = 30
+compute time = 0.013192
+source = 253122 sink = 2272 res = 1000000000.000000
+active num = 372647 iteration num = 40
+compute time = 0.024074
+source = 188371 sink = 239760 res = 1000000000.000000
+active num = 421997 iteration num = 33
+compute time = 0.024030
+source = 242125 sink = 300349 res = 1000000000.000000
+active num = 372731 iteration num = 39
+compute time = 0.027487
+source = 31385 sink = 256422 res = 0.000000
+active num = 31208 iteration num = 45
+compute time = 0.025185
+source = 308118 sink = 33037 res = 0.000000
+active num = 59363 iteration num = 37
+compute time = 0.019572
+source = 89494 sink = 77912 res = 1000000000.000000
+active num = 13202 iteration num = 19
+compute time = 0.007375
+source = 263617 sink = 30941 res = 0.000000
+active num = 46619 iteration num = 37
+compute time = 0.020145
+source = 243103 sink = 90248 res = 0.000000
+active num = 25851 iteration num = 20
+compute time = 0.011557
+source = 56419 sink = 305279 res = 1000000000.000000
+active num = 453877 iteration num = 40
+compute time = 0.035928
+source = 247703 sink = 31475 res = 0.000000
+active num = 46071 iteration num = 35
+compute time = 0.019968
+source = 319406 sink = 275184 res = 1000000000.000000
+active num = 466948 iteration num = 43
+compute time = 0.031770
+source = 111190 sink = 225436 res = 0.000000
+active num = 129613 iteration num = 29
+compute time = 0.021008
+source = 148621 sink = 141421 res = 1000000000.000000
+active num = 578482 iteration num = 35
+compute time = 0.031501
+source = 212923 sink = 105475 res = 1000000000.000000
+active num = 282404 iteration num = 36
+compute time = 0.032220
+source = 195494 sink = 42314 res = 1000000000.000000
+active num = 418846 iteration num = 36
+compute time = 0.027286
+source = 26456 sink = 123059 res = 1000000000.000000
+active num = 3 iteration num = 3
+compute time = 0.001287
+source = 44587 sink = 214827 res = 0.000000
+active num = 154114 iteration num = 43
+compute time = 0.029999
+source = 37262 sink = 286712 res = 0.000000
+active num = 63437 iteration num = 40
+compute time = 0.022986
+source = 189620 sink = 68647 res = 1000000000.000000
+active num = 370 iteration num = 20
+compute time = 0.006642
+source = 217578 sink = 172182 res = 1000000000.000000
+active num = 428469 iteration num = 38
+compute time = 0.021846
+source = 101685 sink = 307072 res = 0.000000
+active num = 6979 iteration num = 19
+compute time = 0.010675
+source = 250094 sink = 39746 res = 0.000000
+active num = 29994 iteration num = 35
+compute time = 0.018472
+source = 12457 sink = 167641 res = 1000000000.000000
+active num = 583509 iteration num = 46
+compute time = 0.031866
+source = 129994 sink = 68876 res = 1000000000.000000
+active num = 3 iteration num = 3
+compute time = 0.003875
+source = 147363 sink = 52141 res = 1000000000.000000
+active num = 712939 iteration num = 55
+compute time = 0.038660
+source = 100351 sink = 141213 res = 0.000000
+active num = 13965 iteration num = 37
+compute time = 0.019940
+source = 1769 sink = 211542 res = 1000000000.000000
+active num = 20 iteration num = 5
+compute time = 0.001697
+source = 41092 sink = 150390 res = 1000000000.000000
+active num = 362742 iteration num = 45
+compute time = 0.028395
+source = 27406 sink = 254016 res = 1000000000.000000
+active num = 422319 iteration num = 33
+compute time = 0.024356
+source = 255865 sink = 222901 res = 1000000000.000000
+active num = 2 iteration num = 2
+compute time = 0.000940
+source = 296330 sink = 282322 res = 1000000000.000000
+active num = 370 iteration num = 4
+compute time = 0.002689
+source = 20403 sink = 15360 res = 1000000000.000000
+active num = 94 iteration num = 16
+compute time = 0.008654
+source = 171592 sink = 57666 res = 1000000000.000000
+active num = 417454 iteration num = 52
+compute time = 0.041263
+source = 302073 sink = 35656 res = 0.000000
+active num = 318546 iteration num = 40
+compute time = 0.032818
+source = 126314 sink = 194094 res = 1000000000.000000
+active num = 2 iteration num = 2
+compute time = 0.000860
+source = 207838 sink = 228000 res = 1000000000.000000
+active num = 318800 iteration num = 45
+compute time = 0.024522
+source = 175609 sink = 132376 res = 1000000000.000000
+active num = 736201 iteration num = 61
+compute time = 0.047631
+source = 267746 sink = 188067 res = 1000000000.000000
+active num = 3 iteration num = 3
+compute time = 0.001376
+source = 300017 sink = 72184 res = 1000000000.000000
+active num = 44 iteration num = 10
+compute time = 0.008648
+source = 256943 sink = 121823 res = 1000000000.000000
+active num = 8479 iteration num = 25
+compute time = 0.013232
+source = 124326 sink = 31738 res = 1000000000.000000
+active num = 599577 iteration num = 64
+compute time = 0.033308
+source = 263036 sink = 126095 res = 1000000000.000000
+active num = 655736 iteration num = 56
+compute time = 0.046192
+source = 243281 sink = 304129 res = 1000000000.000000
+active num = 372625 iteration num = 37
+compute time = 0.025401
+source = 276486 sink = 270688 res = 1000000000.000000
+active num = 387525 iteration num = 35
+compute time = 0.027806
+source = 232588 sink = 206795 res = 1000000000.000000
+active num = 472484 iteration num = 36
+compute time = 0.029312
+source = 168032 sink = 203361 res = 0.000000
+active num = 190607 iteration num = 33
+compute time = 0.022010
+source = 163560 sink = 188436 res = 1000000000.000000
+active num = 34 iteration num = 9
+compute time = 0.004297
+source = 218722 sink = 9596 res = 1000000000.000000
+active num = 552223 iteration num = 41
+compute time = 0.029951
+source = 246103 sink = 195238 res = 1000000000.000000
+active num = 372625 iteration num = 37
+compute time = 0.026040
+source = 45252 sink = 46861 res = 1000000000.000000
+active num = 56 iteration num = 8
+compute time = 0.004763
+source = 63775 sink = 253091 res = 1000000000.000000
+active num = 440359 iteration num = 38
+compute time = 0.034148
+source = 274861 sink = 239385 res = 1000000000.000000
+active num = 422357 iteration num = 40
+compute time = 0.026231
+source = 59910 sink = 217051 res = 1000000000.000000
+active num = 597283 iteration num = 42
+compute time = 0.030536
+source = 101895 sink = 34371 res = 1000000000.000000
+active num = 578903 iteration num = 40
+compute time = 0.032406
+source = 289235 sink = 33282 res = 0.000000
+active num = 46089 iteration num = 36
+compute time = 0.028192
+source = 156194 sink = 88004 res = 0.000000
+active num = 21807 iteration num = 30
+compute time = 0.014687
+source = 65021 sink = 93674 res = 1000000000.000000
+active num = 750452 iteration num = 41
+compute time = 0.029870
+source = 214100 sink = 308302 res = 1000000000.000000
+active num = 435074 iteration num = 33
+compute time = 0.021501
+source = 72246 sink = 165029 res = 1000000000.000000
+active num = 29820 iteration num = 13
+compute time = 0.007757
+source = 253433 sink = 304835 res = 1000000000.000000
+active num = 372625 iteration num = 37
+compute time = 0.029910
+source = 46267 sink = 95909 res = 1000000000.000000
+active num = 702103 iteration num = 50
+compute time = 0.031653
+source = 182639 sink = 209827 res = 1000000000.000000
+active num = 10 iteration num = 6
+compute time = 0.001869
+source = 284345 sink = 75805 res = 1000000000.000000
+active num = 634178 iteration num = 43
+compute time = 0.039072
+source = 219424 sink = 204892 res = 1000000000.000000
+active num = 297264 iteration num = 40
+compute time = 0.031585
+source = 271043 sink = 264676 res = 1000000000.000000
+active num = 949639 iteration num = 46
+compute time = 0.044334
+source = 251753 sink = 9262 res = 0.000000
+active num = 15081 iteration num = 33
+compute time = 0.020548
+source = 192211 sink = 201058 res = 0.000000
+active num = 1332 iteration num = 22
+compute time = 0.013372
+source = 248648 sink = 252121 res = 0.000000
+active num = 11099 iteration num = 25
+compute time = 0.029559
+source = 92552 sink = 24987 res = 0.000000
+active num = 101369 iteration num = 44
+compute time = 0.032180
+source = 286492 sink = 56230 res = 1000000000.000000
+active num = 33442 iteration num = 24
+compute time = 0.016295
+source = 58270 sink = 117130 res = 1000000000.000000
+active num = 450914 iteration num = 43
+compute time = 0.036705
+source = 144235 sink = 123291 res = 1000000000.000000
+active num = 577277 iteration num = 56
+compute time = 0.045511
+source = 210805 sink = 32778 res = 1000000000.000000
+active num = 579601 iteration num = 41
+compute time = 0.039753
+source = 106037 sink = 283052 res = 1000000000.000000
+active num = 2 iteration num = 2
+compute time = 0.000948
+source = 197808 sink = 33914 res = 0.000000
+active num = 50533 iteration num = 47
+compute time = 0.024180
+source = 262330 sink = 244076 res = 0.000000
+active num = 31926 iteration num = 28
+compute time = 0.015258
+source = 129824 sink = 119413 res = 0.000000
+active num = 1028 iteration num = 8
+compute time = 0.003052
+source = 128347 sink = 88613 res = 1000000000.000000
+active num = 281703 iteration num = 52
+compute time = 0.039377
+source = 195218 sink = 22214 res = 1000000000.000000
+active num = 410613 iteration num = 42
+compute time = 0.030383
+source = 293505 sink = 140705 res = 1000000000.000000
+active num = 563232 iteration num = 40
+compute time = 0.029804
+source = 286891 sink = 219701 res = 1000000000.000000
+active num = 3615 iteration num = 8
+compute time = 0.006200
+source = 149968 sink = 153545 res = 1000000000.000000
+active num = 2 iteration num = 2
+compute time = 0.000896
+source = 95203 sink = 73060 res = 1000000000.000000
+active num = 390862 iteration num = 40
+compute time = 0.031096
+source = 80110 sink = 187755 res = 1000000000.000000
+active num = 2 iteration num = 2
+compute time = 0.000925
+source = 98047 sink = 41046 res = 1000000000.000000
+active num = 579072 iteration num = 37
+compute time = 0.028466
+source = 243986 sink = 156317 res = 0.000000
+active num = 29622 iteration num = 37
+compute time = 0.024787
+source = 158176 sink = 62665 res = 1000000000.000000
+active num = 863479 iteration num = 55
+compute time = 0.047367
+source = 279609 sink = 43425 res = 0.000000
+active num = 41181 iteration num = 38
+compute time = 0.026710
+source = 95444 sink = 60090 res = 1000000000.000000
+active num = 29996 iteration num = 23
+compute time = 0.015965
+source = 920 sink = 293252 res = 1000000000.000000
+active num = 2 iteration num = 2
+compute time = 0.000909
+source = 94005 sink = 263250 res = 0.000000
+active num = 12721 iteration num = 22
+compute time = 0.011474
+source = 211771 sink = 223829 res = 1000000000.000000
+active num = 357591 iteration num = 35
+compute time = 0.024486
+source = 57106 sink = 14561 res = 1000000000.000000
+active num = 18365 iteration num = 9
+compute time = 0.006494
+source = 312442 sink = 252325 res = 0.000000
+active num = 20207 iteration num = 26
+compute time = 0.013227
+source = 36776 sink = 280390 res = 0.000000
+active num = 32350 iteration num = 40
+compute time = 0.022250
+source = 67473 sink = 323667 res = 1000000000.000000
+active num = 18365 iteration num = 9
+compute time = 0.009204
+source = 174535 sink = 217442 res = 0.000000
+active num = 9693 iteration num = 30
+compute time = 0.013837
+source = 151655 sink = 269739 res = 1000000000.000000
+active num = 21 iteration num = 4
+compute time = 0.002526
+source = 290502 sink = 231765 res = 1000000000.000000
+active num = 2098 iteration num = 6
+compute time = 0.005373
+source = 131937 sink = 62992 res = 1000000000.000000
+active num = 38237 iteration num = 48
+compute time = 0.025957
+source = 272812 sink = 50367 res = 1000000000.000000
+active num = 447773 iteration num = 53
+compute time = 0.035477
+source = 219310 sink = 105432 res = 1000000000.000000
+active num = 1462 iteration num = 6
+compute time = 0.005011
+source = 113032 sink = 173363 res = 0.000000
+active num = 16551 iteration num = 33
+compute time = 0.016333
+
+compute_num = 500
+compute_time = 10.828951
+avg time = 0.021658
+
+compute_num = 500
+active_num = 123050676
+avg active = 246101.352000
+
+compute_num = 500
+iteration_num = 15295
+avg iteration = 30.590000
+
+iteration 0 active 2.000000
+iteration 1 active 9.696000
+iteration 2 active 2282.490000
+iteration 3 active 3999.272000
+iteration 4 active 1925.568000
+iteration 5 active 3366.902000
+iteration 6 active 6191.160000
+iteration 7 active 8498.292000
+iteration 8 active 11694.194000
+iteration 9 active 14281.648000
+iteration 10 active 16429.012000
+iteration 11 active 18407.270000
+iteration 12 active 19838.762000
+iteration 13 active 19761.992000
+iteration 14 active 19019.090000
+iteration 15 active 17671.978000
+iteration 16 active 15577.570000
+iteration 17 active 13684.932000
+iteration 18 active 11698.464000
+iteration 19 active 9610.282000
+iteration 20 active 7873.230000
+iteration 21 active 6085.134000
+iteration 22 active 4697.368000
+iteration 23 active 3649.708000
+iteration 24 active 2793.222000
+iteration 25 active 2014.322000
+iteration 26 active 1464.904000
+iteration 27 active 1103.462000
+iteration 28 active 768.400000
+iteration 29 active 514.532000
+iteration 30 active 371.686000
+iteration 31 active 258.708000
+iteration 32 active 186.910000
+iteration 33 active 128.584000
+iteration 34 active 89.648000
+iteration 35 active 66.846000
+iteration 36 active 35.000000
+iteration 37 active 19.444000
+iteration 38 active 12.794000
+iteration 39 active 7.752000
+iteration 40 active 4.216000
+iteration 41 active 2.300000
+iteration 42 active 1.364000
+iteration 43 active 0.776000
+iteration 44 active 0.292000
+iteration 45 active 0.124000
+iteration 46 active 0.044000
+iteration 47 active 0.008000
