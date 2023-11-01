@@ -274,7 +274,7 @@ public:
 	}
 
 	template<typename R, typename M>
-	RR process_edges_sparse(std::function<void(VertexId)> sparse_signal, std::function<R(VertexId, M, Adjlist&)> sparse_slot, Bitmap * active) {
+	R process_edges_sparse(std::function<void(VertexId)> sparse_signal, std::function<R(VertexId, M, Adjlist&)> sparse_slot, Bitmap * active) {
 		for (int t_i=0;t_i<threads;t_i++) {//对每个线程，都设置了一个局部的消息发送缓冲区大小并将计数器设为0
 			local_send_buffer[t_i]->resize( sizeof(MsgUnit<M>) * local_send_buffer_limit );
 			local_send_buffer[t_i]->count = 0;
