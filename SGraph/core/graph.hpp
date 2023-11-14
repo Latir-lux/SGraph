@@ -400,22 +400,23 @@ public:
 		uint32_t i = query_snapshot & 1;
 		edge_num += edges.size();
 #pragma omp parallel for
-		for (auto iter : edges)
+		for(int i = 0; i < edges.size(); ++i)
+		//for (auto iter : edges)
 		{
-			VertexId src = iter.src;
-			VertexId dst = iter.dst;
+			VertexId src = edges[i].src;
+			VertexId dst = edges[i].dst;
 			write_add(&out_degree[src], (VertexId)1);
 			write_add(&in_degree[dst], (VertexId)1);
 			if (dst >= partition_offset[partition_id] && dst < partition_offset[partition_id + 1])
 			{
 				std::lock_guard<std::mutex> lock(outgoing_mutex[src]);
-				outgoing_storage[src]->update(AdjEdge<EdgeData>(dst, iter.edge_data), true);
+				outgoing_storage[src]->update(AdjEdge<EdgeData>(dst, edges[i].edge_data), true);
 				outgoing_active[i]->set_bit(src);
 			}
 			if (src >= partition_offset[partition_id] && src < partition_offset[partition_id + 1])
 			{
 				std::lock_guard<std::mutex> lock(incoming_mutex[dst]);
-				incoming_storage[dst]->update(AdjEdge<EdgeData>(src, iter.edge_data), true);
+				incoming_storage[dst]->update(AdjEdge<EdgeData>(src, edges[i].edge_data), true);
 				incoming_active[i]->set_bit(dst);
 			}
 		}
@@ -426,22 +427,23 @@ public:
 		uint32_t i = query_snapshot & 1;
 		edge_num -= edges.size();
 #pragma omp parallel for
-		for (auto iter : edges)
+		for(int i = 0; i < edges.size(); ++i)
+		//for (auto iter : edges)
 		{
-			VertexId src = iter.src;
-			VertexId dst = iter.dst;
+			VertexId src = edges[i].src;
+			VertexId dst = edges[i].dst;
 			write_sub(&out_degree[src], (VertexId)1);
 			write_sub(&in_degree[dst], (VertexId)1);
 			if (dst >= partition_offset[partition_id] && dst < partition_offset[partition_id + 1])
 			{
 				std::lock_guard<std::mutex> lock(outgoing_mutex[src]);
-				outgoing_storage[src]->update(AdjEdge<EdgeData>(dst, iter.edge_data), false);
+				outgoing_storage[src]->update(AdjEdge<EdgeData>(dst, edges[i].edge_data), false);
 				outgoing_active[i]->set_bit(src);
 			}
 			if (src >= partition_offset[partition_id] && src < partition_offset[partition_id + 1])
 			{
 				std::lock_guard<std::mutex> lock(incoming_mutex[dst]);
-				incoming_storage[dst]->update(AdjEdge<EdgeData>(src, iter.edge_data), false);
+				incoming_storage[dst]->update(AdjEdge<EdgeData>(src, edges[i].edge_data), false);
 				incoming_active[i]->set_bit(dst);
 			}
 		}
