@@ -1,8 +1,8 @@
 #ifndef BITMAP_HPP
 #define BITMAP_HPP
 
-#define WORD_OFFSET(i) ((i) >> 6) //计算第i位在哪个数组元素中。
-#define BIT_OFFSET(i) ((i) & 0x3f) //计算第i位在它所在的unsigned long中的位置。
+#define WORD_OFFSET(i) ((i) >> 6)
+#define BIT_OFFSET(i) ((i) & 0x3f)
 
 class Bitmap
 {
@@ -43,7 +43,7 @@ public:
 		}
 	}
 	unsigned long get_bit(size_t i)
-	{//返回位图在给定位置i的位的值
+	{
 		return data[WORD_OFFSET(i)] & (1ul << BIT_OFFSET(i));
 	}
 	void set_bit(size_t i)

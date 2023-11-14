@@ -9,7 +9,7 @@
 #define compiler_fence() asm volatile("" ::: "memory")
 
 template <typename T>
-inline typename std::enable_if<sizeof(T) == 1, bool>::type cas(T *ptr, T oldv, T newv)//std::enable_if技术来条件性地启用此函数模板。它只在sizeof(T) == 1（即类型T的大小为1字节）时起作用
+inline typename std::enable_if<sizeof(T) == 1, bool>::type cas(T *ptr, T oldv, T newv)
 {
     static_assert(sizeof(char) == 1);
     return __sync_bool_compare_and_swap((char *)ptr, *((char *)&oldv), *((char *)&newv));
@@ -40,11 +40,11 @@ template <typename T>
 inline typename std::enable_if<sizeof(T) == 16, bool>::type cas(T *ptr, T oldv, T newv)
 {
     static_assert(sizeof(__int128_t) == 16);
-    return __sync_bool_compare_and_swap((__int128_t *)ptr, *((__int128_t *)&oldv), *((__int128_t *)&newv));//__sync_bool_compare_and_swap函数是gcc提供的一个内建函数，用于实现原子操作，它会对比第一个参数的值和第二个参数的值，如果相等，则将第三个参数的值赋给第一个参数，这个过程是原子的。
+    return __sync_bool_compare_and_swap((__int128_t *)ptr, *((__int128_t *)&oldv), *((__int128_t *)&newv));
 }
 
 template <class T>
-inline void write_add(T *ptr, T val)//一直尝试原子写入，直至写入成功
+inline void write_add(T *ptr, T val)
 {
     volatile T new_val, old_val;
     do

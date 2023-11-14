@@ -1,7 +1,11 @@
 #ifndef SYSTEM_HPP
 #define SYSTEM_HPP
+
 #include <stdio.h>
 #include <stdlib.h>
+#include <iostream>
+#include <fstream>
+
 #include "core/engine.hpp"
 #include "core/graph.hpp"
 #include "core/filesystem.hpp"
@@ -44,12 +48,12 @@ public:
 	VertexId **incoming_indexes_parent[2]; // VertexTree [2][vertices][hubs]
 	VertexId **outgoing_indexes_parent[2]; // VertexTree [2][vertices][hubs]
 	Weight **incoming_indexes_value[2];
-	Weight **outgoing_indexes_value[2];//在ss_query函数中计算
+	Weight **outgoing_indexes_value[2];
 
 	std::mutex *index_mutex;
 
-	VertexId *hub; // 记录所有中心节点，数量是hubs
-	int *is_hub;   // 记录一个节点是否是中心节点，如果不是则为-1，如果是则为中心节点的编号（0~hubs-1）
+	VertexId *hub; // VertexId [hubs]
+	int *is_hub;   // [0,hubs-1] for hub, -1 for others
 	VertexSubset *active_all;
 	VertexSubset *active_in;
 	VertexSubset *active_out;
@@ -61,7 +65,7 @@ public:
 	System(MPI_Instance &mpi, VertexId _vertices, bool _symmetric = false, int _query_threads = 16, int _index_threads = 16)
 		: query_comm(mpi.query_comm), index_comm(mpi.index_comm), graph(_vertices, _symmetric, query_snapshot), query_engine(&graph, _query_threads, QueryMessage, mpi.query_comm), index_engine(&graph, _index_threads, IndexMessage, mpi.index_comm)
 	{
-		omp_set_dynamic(0);//禁止动态调整线程数
+		omp_set_dynamic(0);
 		query_snapshot = 0;
 		symmetric = _symmetric;
 		hub = new VertexId[hubs];
@@ -83,12 +87,13 @@ public:
 	void load_file(std::string file)
 	{
 		long total_bytes = file_size(file.c_str(), graph.partition_id);
-		size_t edge_unit_size = sizeof(EdgeUnit<EdgeData>);//文件中的边数total_edges是文件的字节大小除以每个边单位的大小。
+		size_t edge_unit_size = sizeof(EdgeUnit<EdgeData>);
 		long total_edges = total_bytes / edge_unit_size;
-		long vector_max_length = 1 << 26;// 2^26,long型总共32位,表示每次从文件中一次性读取的最大边的数量。
+		long vector_max_length = 1 << 26;
 		long read_edges = 0;
 		while (read_edges < total_edges)
-		{//分块读取边并获取它们的度数，一个块的大小是2^26
+		{
+            printf("current partition: %d\n", graph.partition_id);
 			long current_read_edges = vector_max_length;
 			if (current_read_edges > total_edges - read_edges)
 			{
@@ -100,7 +105,7 @@ public:
 			t1 += get_time();
 
 			double t2 = -get_time();
-			graph.init_get_degree(edges, current_read_edges);//读入的信息会存放到graph类中
+			graph.init_get_degree(edges, current_read_edges);
 			t2 += get_time();
 
 			delete edges;
@@ -117,9 +122,6 @@ public:
 			graph.outgoing_storage[v_i]->adjlist.reserve(graph.out_degree[v_i]);
 			graph.incoming_storage[v_i]->adjlist.reserve(graph.in_degree[v_i]);
 		}
-		//这段代码是为每个顶点的邻接边列表预留内存。它依赖于已经计算好的度数信息，以确保为邻接边列表预留的内存足够。这是为什么我们首先进行度数的计算的原因。
-		//代码中对于边数据读取了两次，第一次读取的目的主要是计算每个顶点的度数（即每个顶点连接的边的数量）。第一次读取的目的主要是计算每个顶点的度数（即每个顶点连接的边的数量）。
-		//这样做的好处是，当我们在第二次读取中实际地加载边到图数据结构中时，内存已经被预留，所以添加操作更加高效。如果没有这种预留，每次添加新的邻接边时，都可能需要动态地重新分配内存，这可能会导致大量的内存复制操作，从而影响性能。
 
 		read_edges = 0;
 		while (read_edges < total_edges)
@@ -157,11 +159,11 @@ public:
 	{
 		long total_bytes = file_size(file.c_str(), graph.partition_id);
 		size_t edge_unit_size = sizeof(EdgeUnit<EdgeData>);
-		long total_edges = total_bytes / edge_unit_size * 0.7;//使用文件大小除以 EdgeUnit<EdgeData> 的大小得到边的数量。这里只加载了文件中的70%边数据。
+		long total_edges = total_bytes / edge_unit_size * 0.7;
 		long vector_max_length = 1 << 26;
 		long read_edges = 0;
 		while (read_edges < total_edges)
-		{//在 while 循环中，文件中的边被分批加载。每次加载的边数量为 vector_max_length，或者如果剩余的边少于这个数量，则加载所有剩余的边。
+		{
 			long current_read_edges = vector_max_length;
 			if (current_read_edges > total_edges - read_edges)
 			{
@@ -169,11 +171,11 @@ public:
 			}
 			EdgeUnit<EdgeData> *edges = new EdgeUnit<EdgeData>[current_read_edges];
 			double t1 = -get_time();
-			get_edge_vector(file, edges, read_edges, read_edges + current_read_edges, graph.partition_id);//get_edge_vector函数从文件中读取边。
+			get_edge_vector(file, edges, read_edges, read_edges + current_read_edges, graph.partition_id);
 			t1 += get_time();
 
 			double t2 = -get_time();
-			graph.init_get_degree(edges, current_read_edges);//对于每一批加载的边，它们的度数都会被初始化
+			graph.init_get_degree(edges, current_read_edges);
 			t2 += get_time();
 
 			delete edges;
@@ -252,7 +254,6 @@ public:
 
 		MPI_Allreduce(MPI_IN_PLACE, graph.out_degree, graph.vertices, MPI_INT, MPI_SUM, MPI_COMM_WORLD);
 		MPI_Allreduce(MPI_IN_PLACE, graph.in_degree, graph.vertices, MPI_INT, MPI_SUM, MPI_COMM_WORLD);
-		//使用MPI_Allreduce来同步所有MPI进程中的出度和入度信息，确保所有进程都有完整的度数信息。
 	}
 
 	// used to evaluate larger graphs with limited memory
@@ -295,7 +296,7 @@ public:
 	}
 
 	void step()
-	{//system中的step函数会调用graph中的step函数，graph中的step函数会调用storage中的step函数，函数的作用是将buffer中的值更新到Adjlist中。
+	{
 		graph.step();
 		query_snapshot++;
 	}
@@ -327,14 +328,14 @@ public:
 	}
 
 	void ss_query(int h_i, bool reverse = false)
-	{//点对点查询，会获得所有顶点到中心点h_i的最短距离,以及最短路径上的父节点
-		int i = (query_snapshot & 1) ^ 1;// `i`确定查询快照，可能为0或1
-		VertexId **index_parent = reverse ? incoming_indexes_parent[i] : outgoing_indexes_parent[i];//index_parent存储了每个顶点到达每一个hub节点的路径上的父节点，根据是否逆转选择索引
-		Weight **index_value = reverse ? incoming_indexes_value[i] : outgoing_indexes_value[i];//index_value是任意顶点到中心顶点的距离
-		VertexId root = hub[h_i];// 设定root为指定的hub
+	{
+		int i = (query_snapshot & 1) ^ 1;
+		VertexId **index_parent = reverse ? incoming_indexes_parent[i] : outgoing_indexes_parent[i];
+		Weight **index_value = reverse ? incoming_indexes_value[i] : outgoing_indexes_value[i];
+		VertexId root = hub[h_i];
 		active_in->clear();
 		active_in->set_bit(root);
-		index_engine.template process_vertices<VertexId>(// 为每个顶点初始化其在索引中的值
+		index_engine.template process_vertices<VertexId>(
 			[&](VertexId vtx)
 			{
 				Weight init_val = reverse ? init(vtx, root) : init(root, vtx);
@@ -345,7 +346,7 @@ public:
 			active_all);
 		VertexId active_vertices = 1;
 		for (int i_i = 0; active_vertices > 0; i_i++)
-		{// 为每个顶点初始化其在索引中的值
+		{
 			double start = get_time();
 			active_out->clear();
 
@@ -371,14 +372,13 @@ public:
 			// 	active_vertices += local_active_vertices;
 			// }
 
-			//process_edge函数的定义：R process_edges(std::function<void(VertexId)> sparse_signal, std::function<R(VertexId, M, Adjlist&)> sparse_slot, std::function<void(VertexId, Adjlist&)> dense_signal, std::function<R(VertexId, M)> dense_slot, Bitmap * active, Bitmap * dense_selective = nullptr, Bitmap ** dense_selective_hubs = nullptr) 
 			active_vertices = index_engine.template process_edges<VertexId, std::pair<VertexId, Weight>>(
 				[&](VertexId src)
-				{//对于每个源顶点src，此回调发射/发送一个消息，该消息包含顶点自身及其与当前hub（由h_i表示）相关联的索引值。
+				{
 					index_engine.emit(src, std::make_pair(src, index_value[src][h_i]));
 				},
 				[&](VertexId src, std::pair<VertexId, Weight> msg, Adjlist &outgoing_adj)
-				{//这个回调对于每个源顶点src以及与它关联的消息msg和出边列表outgoing_adj，都会执行一些操作。它首先会计算一个值，称为relax_val，并尝试合并这个值到目的顶点dst的索引值。如果成功合并（即更新了索引值），它会标记dst为激活，并递增激活的计数。最后，这个回调返回激活的顶点数。
+				{
 					VertexId activated = 0;
 					uint32_t i = (query_snapshot & 1) ^ 1;
 					for (auto iter : outgoing_adj)
@@ -399,7 +399,7 @@ public:
 					return activated;
 				},
 				[&](VertexId dst, Adjlist &incoming_adj)
-				{//这个回调对于每个源顶点src以及与它关联的消息msg和出边列表outgoing_adj，都会执行一些操作。它首先会计算一个值，称为relax_val，并尝试合并这个值到目的顶点dst的索引值。如果成功合并（即更新了索引值），它会标记dst为激活，并递增激活的计数。最后，这个回调返回激活的顶点数。
+				{
 					Weight init_val = reverse ? init(dst, root) : init(root, dst);
 					Weight msg = init_val;
 					VertexId msg_src = graph.vertices;
@@ -441,7 +441,7 @@ public:
 
 	void build_index()
 	{
-		if (graph.partition_id == 0)//只在id为0的分区build_index
+		if (graph.partition_id == 0)
 		{
 			printf("build_index\n");
 		}
@@ -464,7 +464,7 @@ public:
 
 		if (symmetric)
 		{
-			for (int i = 0; i < 2; i++)//两个版本
+			for (int i = 0; i < 2; i++)
 			{
 				incoming_indexes_parent[i] = outgoing_indexes_parent[i] = new VertexId *[graph.vertices];
 				incoming_indexes_value[i] = outgoing_indexes_value[i] = new Weight *[graph.vertices];
@@ -480,7 +480,7 @@ public:
 		}
 		else
 		{
-			for (int i = 0; i < 2; i++)//两个版本
+			for (int i = 0; i < 2; i++)
 			{
 				incoming_indexes_parent[i] = new VertexId *[graph.vertices];
 				incoming_indexes_value[i] = new Weight *[graph.vertices];
@@ -514,7 +514,7 @@ public:
 			is_hub[v_i] = -1;
 		}
 		for (int h_i = 0; h_i < hubs; h_i++)
-		{//选择度数最大的hub个顶点，作为中心顶点
+		{
 			VertexId max_v_i = graph.vertices;
 			for (VertexId v_i = 0; v_i < graph.vertices; v_i++)
 			{
@@ -532,9 +532,9 @@ public:
 		// cal hub's sssp
 		double tot_time = 0;
 		for (int h_i = 0; h_i < hubs; h_i++)
-		{//统计所有顶点到hub的最短路径
+		{
 			double t = -get_time();
-			ss_query(h_i);////点对点查询，会获得所有顶点到中心点h_i的最短距离,以及最短路径上的父节点
+			ss_query(h_i);
 			t += get_time();
 			tot_time += t;
 			if (graph.partition_id == 0)
@@ -546,7 +546,7 @@ public:
 			{
 				double t = -get_time();
 				index_engine.transpose();
-				ss_query(h_i, true);//ss_query(h_i)执行的是false方向的查询，如果是对于非对称图（有向图），还需要在true方向再查一次。
+				ss_query(h_i, true);
 				index_engine.transpose();
 				t += get_time();
 				tot_time += t;
@@ -1298,7 +1298,6 @@ public:
 				active_num += active_source_vertices;
 				active_on_iteration[i_i] += active_source_vertices;
 				active_source_out->clear();
-				//R process_edges(std::function<void(VertexId)> sparse_signal, std::function<R(VertexId, M, Adjlist&)> sparse_slot, std::function<void(VertexId, Adjlist&)> dense_signal, std::function<R(VertexId, M)> dense_slot, Bitmap * active, Bitmap * dense_selective = nullptr, Bitmap ** dense_selective_hubs = nullptr) {
 				active_source_vertices = query_engine.template process_edges<VertexId, Weight>(
 					[&](VertexId src)
 					{
@@ -1722,19 +1721,34 @@ public:
 		return upper_bound;
 	}
 
-	Weight compute(VertexId source, VertexId sink, uint64_t &active_num, uint64_t &iteration_num, uint64_t *active_on_iteration)
+	Weight compute(VertexId source, VertexId sink, uint64_t &active_num, uint64_t &iteration_num, uint64_t *active_on_iteration, std::string logname)
 	{
-		///////定义变量
+        std::ofstream pathlog;
+
+        omp_lock_t filelock;
+        omp_init_lock(&filelock);
+
+#ifdef INDEX_UPPER
+        logname += "UB";
+#endif
+
+#ifdef INDEX_LOWER
+        logname += "_LB";
+#endif
+
+        pathlog.open("/home/fuyutao/SGraph/SGraph/pathlog/log/path_" + logname + ".txt", std::ios::in | std::ios::app);
+        if(!pathlog){
+            perror("file open error!");
+            exit(0);
+        }
 		int i = query_snapshot & 1;
 		Weight **outgoing_index_value = outgoing_indexes_value[i];
 		Weight **incoming_index_value = incoming_indexes_value[i];
 
-		Weight *outgoing_index_value_source = new Weight[hubs];//沿着出边方向找，从中心节点到源顶点的最短距离
-		Weight *incoming_index_value_source = new Weight[hubs];//沿着入边方向找，从中心节点到源顶点的最短距离
-		Weight *outgoing_index_value_sink = new Weight[hubs];//沿着出边方向找，从中心节点到目的顶点的最短距离
-		Weight *incoming_index_value_sink = new Weight[hubs];//沿着入边方向找，从中心节点到目的顶点的最短距离
-
-		////////初始化
+		Weight *outgoing_index_value_source = new Weight[hubs];
+		Weight *incoming_index_value_source = new Weight[hubs];
+		Weight *outgoing_index_value_sink = new Weight[hubs];
+		Weight *incoming_index_value_sink = new Weight[hubs];
 		int source_part = graph.get_partition_id(source);
 		for (int h_i = 0; h_i < hubs; h_i++)
 		{
@@ -1759,12 +1773,11 @@ public:
 		MPI_Bcast(outgoing_index_value_sink, hubs * sizeof(Weight), MPI_CHAR, sink_part, query_comm);
 		MPI_Bcast(incoming_index_value_sink, hubs * sizeof(Weight), MPI_CHAR, sink_part, query_comm);
 
-		///////计算上下界
-		Weight upper_bound = init(source, sink); // 对于BFS算法，如果起始点和终点不重合，那么上界的初始值是1000000000
+		Weight upper_bound = init(source, sink); // record current upper_bound
 #ifdef INDEX_UPPER
 		for (int h_i = 0; h_i < hubs; h_i++)
 		{
-			Weight tmp = forward(incoming_index_value_source[h_i], outgoing_index_value_sink[h_i]);// 对于BFS算法，这句话将两个参数相加
+			Weight tmp = forward(incoming_index_value_source[h_i], outgoing_index_value_sink[h_i]);
 			if (merge(tmp, upper_bound) != upper_bound)
 			{
 				upper_bound = tmp;
@@ -1773,14 +1786,11 @@ public:
 #endif
 
 #ifdef INDEX_LOWER
-		/////下界剪枝并，比较巧妙，当下界不满足就直接终止
-		Weight lower_bound = init(source, source);//对于BFS算法，下界的初始值是0
+		Weight lower_bound = init(source, source);
 		for (int h_i = 0; h_i < hubs; h_i++)
 		{
-			//这里的下界剪枝，对应于论文中的公式 𝑄(𝑣 ↦ 𝑑) ⪰ 𝑄(ℎ ↦ 𝑑) ⊖ 𝑄(ℎ ↦ 𝑣)、 𝑄(𝑣 ↦ 𝑑) ⪰ 𝑄(𝑣 ↦ ℎ) ⊖ 𝑄(𝑑 ↦ ℎ) 
-
 			Weight tmp;
-			tmp = backward(incoming_index_value_sink[h_i], incoming_index_value_source[h_i]);//对于BFS算法，它首先判断参数1是否小于参数2，如果是，则返回（参数2-参数1），否则返回0
+			tmp = backward(incoming_index_value_sink[h_i], incoming_index_value_source[h_i]);
 			if (merge(tmp, lower_bound) != tmp)
 			{
 				lower_bound = tmp;
@@ -1793,12 +1803,10 @@ public:
 		}
 		if (merge(forward(init(source, source), lower_bound), upper_bound) == upper_bound)
 		{ // trim by lower_bound
-			return upper_bound;//感觉这里写的不好，不能不满足下界就直接返回上界，这样程序就终止了
+			return upper_bound;
 		}
 #endif
 
-
-		///////定义、初始化待处理顶点集
 		Weight *value_source = graph.template alloc_vertex_array_adhoc<Weight>();
 		Weight *value_sink = graph.template alloc_vertex_array_adhoc<Weight>();
 		VertexSubset *active_source_in = graph.alloc_vertex_subset();
@@ -1810,8 +1818,6 @@ public:
 		active_sink_in->clear();
 		active_sink_in->set_bit(sink);
 
-		// template<typename R>
-		// R process_vertices(std::function<R(VertexId)> process, Bitmap * active)
 		query_engine.template process_vertices<VertexId>(
 			[&](VertexId vtx)
 			{
@@ -1826,14 +1832,14 @@ public:
 #ifdef BFS_OPT
 		int intersect = 0;
 #endif
-		/////////开始计算
+
 #ifdef BIDIRECTIONAL
 		for (int i_i = 0; active_source_vertices > 0 || active_sink_vertices > 0; i_i++)
 		{
 #else
 		for (int i_i = 0; active_source_vertices > 0; i_i++)
 		{
-#endif		//////////通过上下界剪枝，计算从顶点vtx开始需要激活的顶点数量。
+#endif
 			active_source_vertices = query_engine.template process_vertices<VertexId>(
 				[&](VertexId vtx)
 				{
@@ -1850,7 +1856,6 @@ public:
 					}
 #endif
 #ifdef INDEX_LOWER
-					/////下界剪枝并，比较巧妙，当下界不满足就直接终止
 					Weight lower_bound = init(vtx, vtx);
 					for (int h_i = 0; h_i < hubs; h_i++)
 					{
@@ -1875,10 +1880,7 @@ public:
 					return 1;
 				},
 				active_source_in);
-			
 
-
-			///////前向计算
 			if (active_source_vertices > 0)
 			{ // forward
 				iteration_num++;
@@ -1912,10 +1914,6 @@ public:
 				// 	active_source_vertices += local_active_source_vertices;
 				// }
 
-				// template<typename R, typename M>
-				// R process_edges_sparse(std::function<void(VertexId)> sparse_signal, std::function<R(VertexId, M, Adjlist&)> sparse_slot, Bitmap * active) 
-				
-				
 				active_source_vertices = query_engine.template process_edges_sparse<VertexId, Weight>(
 					[&](VertexId src)
 					{
@@ -1930,6 +1928,7 @@ public:
 							if (!iter.get_valid(i))
 								continue;
 							VertexId dst = iter.nbr;
+
 							Weight relax_val = forward(msg, iter.data);
 							if (merge(relax_val, value_source[dst]) != value_source[dst])
 							{
@@ -1938,11 +1937,15 @@ public:
 									Weight tmp = forward(value_source[dst], value_sink[dst]);
 									if (merge(tmp, upper_bound) != upper_bound)
 									{ // update upper_bound
-										monotonic_write(&upper_bound, tmp);//单调写入，只有当tmp小于upper_bound时，才会更新upper_bound
+										monotonic_write(&upper_bound, tmp);
 #ifdef BFS_OPT
-										intersect = 1;//一旦确定路径已经被发现，所有其他的搜索尝试都可以提前终止，从而节省计算资源。
+										intersect = 1;
 #endif
 									}
+                                    omp_set_lock(&filelock);
+                                    pathlog << dst << std::endl; 
+                                    omp_unset_lock(&filelock);
+
 									active_source_out->set_bit(dst);
 									activated += 1;
 								}
@@ -1992,7 +1995,6 @@ public:
 					}
 #endif
 #ifdef INDEX_LOWER
-					/////下界剪枝并，比较巧妙，当下界不满足就直接终止
 					Weight lower_bound = init(vtx, vtx);
 					for (int h_i = 0; h_i < hubs; h_i++)
 					{
@@ -2066,6 +2068,7 @@ public:
 							if (!iter.get_valid(i))
 								continue;
 							VertexId dst = iter.nbr;
+
 							Weight relax_val = forward(msg, iter.data);
 							if (merge(relax_val, value_sink[dst]) != value_sink[dst])
 							{
@@ -2076,9 +2079,14 @@ public:
 									{ // update upper_bound
 										monotonic_write(&upper_bound, tmp);
 #ifdef BFS_OPT
-										intersect = 1;//一旦确定路径已经被发现，所有其他的搜索尝试都可以提前终止，从而节省计算资源。
+										intersect = 1;
 #endif
 									}
+                                    omp_set_lock(&filelock);
+                                    pathlog << dst << std::endl; 
+                                    omp_unset_lock(&filelock);
+
+
 									active_sink_out->set_bit(dst);
 									activated += 1;
 								}
@@ -2120,6 +2128,9 @@ public:
 #endif
 		}
 
+        omp_destroy_lock(&filelock);
+        pathlog.close();
+        
 		graph.dealloc_vertex_array_adhoc(value_source);
 		graph.dealloc_vertex_array_adhoc(value_sink);
 		delete active_source_in;

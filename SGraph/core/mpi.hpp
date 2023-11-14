@@ -59,7 +59,7 @@ public:
 	MPI_Instance(int *argc, char ***argv)
 	{
 		int provided;
-		MPI_Init_thread(argc,argv, MPI_THREAD_MULTIPLE, &provided);
+		MPI_Init_thread(argc, argv, MPI_THREAD_MULTIPLE, &provided);
 #ifdef PRINT_DEBUG_MESSAGES
 		if (partition_id == 0)
 		{

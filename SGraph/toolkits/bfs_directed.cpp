@@ -8,7 +8,7 @@ using namespace std;
 
 typedef int Weight;
 typedef Empty<int> EdgeData;
-template <> int AdjEdge <EdgeData>::data = 1;//data是静态成员变量，需要在类或结构体定义的外部进行定义和初始化
+template <> int AdjEdge <EdgeData>::data = 1;
 template <> int EdgeUnit <EdgeData>::edge_data = 1;
 
 class Init {

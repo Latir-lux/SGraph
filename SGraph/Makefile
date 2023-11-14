@@ -1,6 +1,5 @@
 ROOT_DIR= $(shell pwd)
 
-# TARGETS变量中的每个元素都是一个可执行文件的名字，比如TARGETS = test1 test2
 TARGETS = toolkits/update/ppsp_directed toolkits/update/viterbi_directed toolkits/update/ppwp_directed toolkits/update/ppnp_directed toolkits/update/bfs_directed toolkits/update/wcc_directed \
 			toolkits/update/ppsp_undirected toolkits/update/viterbi_undirected toolkits/update/ppwp_undirected toolkits/update/ppnp_undirected toolkits/update/bfs_undirected toolkits/update/wcc_undirected \
 			toolkits/no/ppsp_directed \
@@ -34,14 +33,12 @@ MACROS_PNP_BFS = -D STATIC -D PNP_CORE -D BFS_OPT
 
 MPICXX= mpicxx
 CXXFLAGS= -Wall -O3 -std=c++14 -g -fopenmp -march=native -I $(ROOT_DIR) -I deps
-#-march=native: 优化代码以适应当前机器的架构。编译器会自动检测并使用当前机器支持的所有指令集和其他特性。
 HEADERS= $(shell find . -name '*.hpp')
 
 all: $(TARGETS)
 
 toolkits/%: toolkits/%.cpp $(HEADERS)
-					$(MPICXX) $(CXXFLAGS) $(MACROS_PLAIN) -o $@ $<   
-#$@表示目标文件，$<表示第一个依赖文件
+					$(MPICXX) $(CXXFLAGS) $(MACROS_PLAIN) -o $@ $<
 
 toolkits/update/%: toolkits/%.cpp $(HEADERS)
 					$(MPICXX) $(CXXFLAGS) $(MACROS_UPDATE) -o $@ $<

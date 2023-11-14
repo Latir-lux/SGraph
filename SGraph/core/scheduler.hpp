@@ -31,12 +31,12 @@ public:
     }
     VertexId get_random_vertex(VertexId vertices)
     {
-        return 1.0 * rand() / RAND_MAX * vertices;//这句话会返回一个0~vertices之间的随机数
+        return 1.0 * rand() / RAND_MAX * vertices;
     }
-    void compute(System<Weight, EdgeData, Init, Forward, Backward, Merge> &system)
+    void compute(System<Weight, EdgeData, Init, Forward, Backward, Merge> &system, std::string logname)
     {
         VertexId source = get_random_vertex(vertices);
-        VertexId sink = get_random_vertex(vertices);//终点
+        VertexId sink = get_random_vertex(vertices);
         uint64_t cur_active_num = 0;
         uint64_t cur_iteration_num = 0;
 #ifdef PNP_CORE
@@ -46,7 +46,7 @@ public:
         Weight res = system.tripoline(source, sink, cur_active_num, cur_iteration_num, active_on_iteration);
 #endif
 #ifdef SGRAPH_CORE
-        Weight res = system.compute(source, sink, cur_active_num, cur_iteration_num, active_on_iteration);
+        Weight res = system.compute(source, sink, cur_active_num, cur_iteration_num, active_on_iteration, logname);
 #endif
         if (system.graph.partition_id == 0)
         {
@@ -74,7 +74,7 @@ public:
         std::string file = argv[1];
         vertices = std::atoi(argv[2]);
 
-        System<Weight, EdgeData, Init, Forward, Backward, Merge> system(mpi, vertices, symmetric, 48, 48);//后面两个参数是query_threads和index_threads
+        System<Weight, EdgeData, Init, Forward, Backward, Merge> system(mpi, vertices, symmetric, 48, 48);
         omp_set_num_threads(96);
 
         system.load_file(file); // In this version of code, we use some tricks to reduce memory cost so that we can
@@ -92,20 +92,21 @@ public:
 
 #ifndef PNP_CORE
         MPI_Barrier(MPI_COMM_WORLD);
-        double t = -get_time();//一个巧妙的方法，用一个变量完成时间统计
+        double t = -get_time();
         system.build_index();
         MPI_Barrier(MPI_COMM_WORLD);
         t += get_time();
         if (system.graph.partition_id == 0)
             printf("build time = %f\n", t);
-        system.step();//step函数会将更新写入Adjlist中
+        system.step();
 #endif
 
-        for (int i = 0; i < 500; i++)
+        for (int i = 0; i < 40; i++)
         {
             MPI_Barrier(mpi.query_comm);
             double t = -get_time();
-            compute(system);
+            std::string logname = std::to_string(i);
+            compute(system, logname);
             MPI_Barrier(mpi.query_comm);
             t += get_time();
             if (system.graph.partition_id == 0)
@@ -142,13 +143,13 @@ public:
             {
                 if (active_on_iteration[i] == 0)
                     break;
-                printf("iteration %d active %f\n", i, (double)active_on_iteration[i] / compute_num);//active_on_iteration统计每一轮活跃顶点数，为了减小统计误差，执行了compute_num次，所以最终结果要除以compute_num。
+                printf("iteration %d active %f\n", i, (double)active_on_iteration[i] / compute_num);
             }
         }
     }
 
     void work_update()
-    {//updata只做图更新工作,并不进行计算
+    {
         srand(0);
         MPI_Instance mpi(&argc, &argv);
         if (argc < 3)
@@ -159,7 +160,7 @@ public:
         std::string file = argv[1];
         vertices = std::atoi(argv[2]);
 
-        System<Weight, EdgeData, Init, Forward, Backward, Merge> system(mpi, vertices, symmetric, 48, 48);//后面两个参数是query_threads和index_threads
+        System<Weight, EdgeData, Init, Forward, Backward, Merge> system(mpi, vertices, symmetric, 48, 48);
         omp_set_num_threads(48);
 
         EdgeUnit<EdgeData> **dynamic_edges_add;
@@ -217,7 +218,6 @@ public:
             }
         }
     }
-
 };
 
 #endif
